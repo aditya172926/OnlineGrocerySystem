@@ -278,7 +278,6 @@ a.simpleCart_empty {
 }
 .ordering-section-head h3{
 	color: #515151;
-	font-family: 'Lobster Two', cursive;
 	font-size: 2.6em;
 	font-weight: 500;
 }
@@ -333,12 +332,15 @@ a.simpleCart_empty {
 	width: 45%;
 	float: left;
 }
+
+.foursteps:hover {
+	transform: scale(1.5);
+}
 .res-img-2{
 	margin-bottom:1.7em;
 	float: left;
 }
 .top-restaurent-head {
-	background: url(../images/dotted-line-right.png) no-repeat 240px 18px;
 	margin: 0 0 3em 0;
 }
 .top-cuisine-head h3{
@@ -2645,7 +2647,6 @@ a.morebtn{
 		font-size: 1.8em;
 	}
 	.top-restaurent-head {
-		background: url(../images/dotted-line-right.png) no-repeat 219px 18px;
 		margin: 0 0 2em 0;
 	}
 	.top-restaurent-head h3 {
@@ -2919,7 +2920,6 @@ a.morebtn{
 		font-size: 1.6em;
 	}
 	.top-restaurent-head {
-		background: url(../images/dotted-line-right.png) no-repeat 182px 13px;
 		margin: 0 0 1.5em 0;
 	}
 	.popular-restaurents {
@@ -3916,7 +3916,6 @@ a.morebtn{
 		margin-bottom: 1em;
 	}
 	.top-restaurent-head {
-		background: url(../images/dotted-line-right.png) no-repeat 140px 11px;
 		margin: 0 0 1.5em 0;
 	}
 	.offer-text h4 {
