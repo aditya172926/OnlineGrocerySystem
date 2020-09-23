@@ -58,6 +58,54 @@
     .push {
       height: 155px;
     }
+
+    .slider {
+        width: 500px;
+        height: 300px;
+        background-color: yellow;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+        text-align: center;
+        overflow: hidden;
+      }
+      .image-container {
+        width: 1500px;
+        background-color: pink;
+        height: 300px;
+        clear: both;
+        position: relative;
+        -webkit-transition: left 2s;
+        -moz-transition: left 2s;
+        -o-transition: left 2s;
+        transition: left 2s;
+      }
+      .slide {
+        float: left;
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+      }
+      #slide-1:target ~ .image-container {
+        left: 0px;
+      }
+      #slide-2:target ~ .image-container {
+        left: -500px;
+      }
+      #slide-3:target ~ .image-container {
+        left: -1000px;
+      }
+      .buttons {
+        position: relative;
+        top: -20px;
+      }
+      .buttons a {
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        border-radius: 50px;
+        background-color: lightgreen;
+      }
   </style>
 </head>
 
@@ -108,8 +156,14 @@
       <div class="row">
         <div class="col">
           <div class="col4 text-light ">
-            <h1 style="font-style:italic; font-family:sans-serif; "><strong>Feeling Hungry</strong></h1>
-            <h2><strong>Register Now<br />and<br />Order Online</strong></h2>
+            <h1 style="font-style:italic; font-family:sans-serif; ">
+              <strong>
+                Feeling Hungry
+              </strong>
+            </h1>
+            <h2>
+              <strong>Register Now<br />and<br />Order Online</strong>
+            </h2>
           </div>
           <br>
           <a href="{% url 'register'%}" class="text-light">
@@ -122,8 +176,14 @@
         </div>
         <div class="col">
           <div class="col4 text-light">
-            <h1 style="font-style:italic; font-family:sans-serif; "><strong>Be a Partner</strong></h1>
-            <h2><strong>Join Us Today<br />and<br>Increase Your Sale</strong></h2>
+            <h1 style="font-style:italic; font-family:sans-serif; ">
+              <strong>
+                Be a Partner
+              </strong>
+            </h1>
+            <h2>
+              <strong>Join Us Today<br />and<br>Increase Your Sale</strong>
+            </h2>
           </div>
           <br>
           <a href="{% url 'rregister'%}" class="text-light">
@@ -144,9 +204,13 @@
     <div class="ordering-section" id="Order">
       <div class="container">
         <div class="ordering-section-head text-center wow bounceInRight" data-wow-delay="0.4s">
-          <h3 style="font-family: Open Sans;">Ordering Groceries was never so easy</h3>
+          <h3 style="font-family: Open Sans;">
+            Ordering Groceries was never so easy
+          </h3>
           <br>
-          <h4>Just 4 steps to follow </h4>
+          <h4>
+            Just 4 steps to follow 
+          </h4>
           <br>
         </div>
 
@@ -253,11 +317,13 @@
   <br>
   <div class="container col-md-9">
     <div class="top-cuisine-head">
-      <h3 style="font-family: Open Sans;">Top Cuisines</h3>
+      <h3 style="font-family: Open Sans;">
+        Top Cuisines
+      </h3>
     </div>
     <div class="row">
 
-      <div class="col-md-4 ">
+      <!-- <div class="col-md-4 ">
         <div class="thumbnail">
           <a href="">
             <img src="/static/webapp/images/cuisine1.jpg" class="img-responsive" alt="" />
@@ -270,9 +336,9 @@
             </strong>
           </h5>
         </div>
-      </div>
+      </div> -->
 
-      <div class="col-md-4 mb-3">
+      <!-- <div class="col-md-4 mb-3">
         <div class="thumbnail">
           <a href="">
             <img src="/static/webapp/images/cuisine2.jpg" class="img-responsive" alt="" />
@@ -301,6 +367,7 @@
           </h5>
         </div>
       </div>
+
       <div class="col-md-4 mb-3">
         <div class="thumbnail">
           <a href="">
@@ -322,7 +389,6 @@
             <img src="/static/webapp/images/cuisine5.jpg" class="img-responsive" alt="" />
           </a>
         </div>
-
         <div class="caption col-sm-4">
           <h5 class="text-secondary">
             <strong style="color: black; font-family: Open Sans;">
@@ -331,6 +397,7 @@
           </h5>
         </div>
       </div>
+
       <div class="col-md-4 ">
         <div class="thumbnail">
           <a href="">
@@ -372,11 +439,28 @@
             </h5>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <div class="clearfix"></div>
+      <!-- <div class="clearfix"></div> -->
 
     </div>
+
+    <div class="slider">
+      <span id="slide-1"></span>
+      <span id="slide-2"></span>
+      <!-- <span id="slide-3"></span> -->
+      <div class="image-container">
+        <img src="static/webapp/images/freshFoodEveryday.png" class="slide" width="500" height="300" />
+        <img src="static/webapp/images/orderOnline.png" class="slide" width="500" height="300" />
+        <!-- <img src="" class="slide" width="500" height="300" /> -->
+      </div>
+      <div class="buttons">
+        <a href="#slide-1"></a>
+        <a href="#slide-2"></a>
+        <!-- <a href="#slide-3"></a> -->
+      </div>
+    </div>
+
   </div>
 
   <br>

@@ -350,7 +350,6 @@ a.simpleCart_empty {
 	font-weight: 700;
 }
 .top-cuisine-head {
-	background: url(../images/dotted-line-right-wide.png) no-repeat 253px 18px;
 	margin: 0 0 3em 0;
 }
 .ordering-section-grid{
@@ -2641,7 +2640,6 @@ a.morebtn{
 	}
 	.top-cuisine-head {
 		margin: 0 0 2em 0;
-		background: url(../images/dotted-line-right-wide.png) no-repeat 150px 16px;
 	}
 	.top-cuisine-head h3 {
 		font-size: 1.8em;
@@ -3904,7 +3902,6 @@ a.morebtn{
 	}
 	.top-cuisine-head {
 		margin: 0 0 1.5em 0;
-		background: url(../images/dotted-line-right-wide.png) no-repeat 130px 12px;
 	}
 	.top-restaurent-head h3 {
 		font-size: 1.35em;
