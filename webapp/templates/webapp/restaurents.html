@@ -35,7 +35,7 @@ Grocery Stores
 <div class="container">
   <div class="row">
     {% for rest in r_object %}
-    <div class="col-xs-7 col-md-6 flip-card">
+    <div class="col-xs-7 col-md-6 flip-card" style="height: 140px; border: none;">
       <div class="thumbnail flip-card-inner">
         <div class="media mb-2 ml-8 flip-card-front"
           style="border-radius: 10px; border-style: groove; border-width: 2px;">
@@ -68,10 +68,8 @@ Grocery Stores
           </div>
         </div>
 
-        <div class="media mb-2 ml-8 flip-card-back"
-          style="background-color: black;">
+        <div class="media mb-2 ml-8 flip-card-back glow-on-hover" style="background-color: black;">
           <div class="media-body pl-4">
-            
             <h4 class="storeAddress">
               <a href="http://maps.google.com/?q={{rest.location}}" target="_blank">
                 <font class="storeAddress">
@@ -79,7 +77,16 @@ Grocery Stores
                 </font>
               </a>
             </h4>
-
+            <a href="http://maps.google.com/?q={{rest.location}}" target="_blank">
+              <button class='glow-on-hover' type='submit' style="border: 1px solid white;">
+                Location
+              </button>
+            </a>
+            <a href="{% url 'menu' rest.id %}">
+              <button class='glow-on-hover' type='submit' style="border: 1px solid white;">
+                Show Menu
+              </button>
+            </a>
           </div>
         </div>
 
