@@ -20,7 +20,7 @@ Grocery Stores
           <input type="text" class="form-control input-lg " name="q" value="{{ request.GET.q }}"
             placeholder="Search Stores " style="height: 40px; width: 50%; font-size: 20px;" /> &nbsp;&nbsp;
           <span class='input-group-btn'>
-            <button class='glow-on-hover' type='submit'>
+            <button class='glow-on-hover' type='submit' style="color: rgb(0, 248, 33); border: 1px solid grey;">
               Search
             </button>
           </span>
@@ -68,22 +68,24 @@ Grocery Stores
           </div>
         </div>
 
-        <div class="media mb-2 ml-8 flip-card-back glow-on-hover" style="background-color: black;">
+        <div class="media mb-2 ml-8 flip-card-back glow-on-hover">
           <div class="media-body pl-4">
+            <br>
             <h4 class="storeAddress">
-              <a href="http://maps.google.com/?q={{rest.location}}" target="_blank">
+              <a href="http://maps.google.com/?q={{rest.location}}" target="_blank" style="text-decoration: none !important;">
                 <font class="storeAddress">
                   Address: <strong>{{ rest.location }}</strong>
                 </font>
               </a>
             </h4>
-            <a href="http://maps.google.com/?q={{rest.location}}" target="_blank">
-              <button class='glow-on-hover' type='submit' style="border: 1px solid white;">
-                Location
+            <br><br>
+            <a href="http://maps.google.com/?q={{rest.location}}" target="_blank" style="text-decoration: none !important;">
+              <button class='glow-on-hover' type='submit' style="border: 1px solid grey;">
+                Show Location
               </button>
             </a>
-            <a href="{% url 'menu' rest.id %}">
-              <button class='glow-on-hover' type='submit' style="border: 1px solid white;">
+            <a href="{% url 'menu' rest.id %}" style="text-decoration: none !important;">
+              <button class='glow-on-hover' type='submit' style="border: 1px solid grey;">
                 Show Menu
               </button>
             </a>

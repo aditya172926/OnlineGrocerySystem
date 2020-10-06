@@ -26,6 +26,7 @@
     <link href="static/webapp/css/animate.css" rel='stylesheet' type='text-center/css' />
     <link rel='stylesheet' href="../../static/webapp/css/buttonanimation.css"/>
     <link rel='stylesheet' href="../../static/webapp/css/flippingcards.css"/>
+    <link rel='stylesheet' href="../../static/webapp/css/waves.css"/>
 
 </head>
 
@@ -117,11 +118,27 @@
 
     {% block body %}
     {% endblock %}
-    <br>
-    <br>
-    <br>
-    <br>
 
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(99,255,51,0.7)" />
+              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(99,255,51,0.5)" />
+              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(99,255,51,0.3)" />
+              <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(99,255,51,0.7)" />
+            </g>
+        </svg>
+    </div>
+    <div class="wavecontent flex">
+        <p>2020 | For educational Purposes</p>
+      </div>
     
 
     <script type="text/javascript" src="{%static 'webapp/js/jquery.min.js'%}">
