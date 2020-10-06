@@ -67,6 +67,11 @@ label{
   float: right;
   vertical-align: middle;
 }
+
+.storeAddress {
+	color: white;
+}
+
 .queries p{
 	color:#727272;
 	font-size:1.3em;
