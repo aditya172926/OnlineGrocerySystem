@@ -277,54 +277,17 @@
       <h3 style="font-family: Open Sans;">Top Grocery Stores</h3>
     </div>
     <div class="row">
-
+      {% for restaurant in restaurants %}
       <div class="col-md-4 ">
         <div class="groceryStore">
           <a href="{% url 'restuarant' %}">
-            <img src="/static/webapp/images/restaurent-2.jpg" class="img-responsive" alt="" />
+            <img style="width: 15rem; height: 10rem;" src="{{ restaurant.r_logo.url }}" class="img-responsive" alt="" />
           </a>
-
         </div>
       </div>
+      {% endfor %}
       <br>
-      <div class="col-md-4 ">
-        <div class="thumbnail">
-          <a href="{% url 'restuarant' %}">
-            <img src="/static/webapp/images/restaurent-3.jpg" class="img-responsive" alt="" />
-          </a>
-
-        </div>
-      </div>
-      <br>
-      <div class="col-md-4 ">
-        <div class="thumbnail">
-          <a href="{% url 'restuarant' %}">
-            <img src="/static/webapp/images/restaurent-4.jpg" class="img-responsive" alt="" />
-          </a>
-
-        </div>
-      </div>
-      <br>
-      <div class="col-md-4 ">
-        <div class="thumbnail">
-          <a href="{% url 'restuarant' %}">
-            <img src="/static/webapp/images/restaurent-5.jpg" class="img-responsive" alt="" />
-          </a>
-
-        </div>
-      </div>
-      <br>
-      <div class="col-md-4 ">
-        <div class="thumbnail">
-          <a href="{% url 'restuarant' %}">
-            <img src="/static/webapp/images/restaurent-6.jpg" class="img-responsive" alt="" />
-          </a>
-
-        </div>
-      </div>
-
     </div>
-
   </div>
 
   <br>
