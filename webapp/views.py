@@ -13,7 +13,8 @@ from .models import Customer, Restaurant, Item, Menu, Order, orderItem, User
 
 # Showing index page
 def index(request):
-	return render(request,'webapp/index.html',{})
+	items = Item.objects.all()
+	return render(request,'webapp/index.html',{'items':items})
 
 def orderplaced(request):
 	return render(request,'webapp/orderplaced.html',{})
