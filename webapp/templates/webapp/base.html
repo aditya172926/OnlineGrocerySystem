@@ -25,9 +25,10 @@
     <!--Animation-->
     <script src="/static/webapp/js/wow.min.js"></script>
     <link href="static/webapp/css/animate.css" rel='stylesheet' type='text-center/css' />
-    <link rel='stylesheet' href="../../static/webapp/css/buttonanimation.css"/>
-    <link rel='stylesheet' href="../../static/webapp/css/flippingcards.css"/>
-    <link rel='stylesheet' href="../../static/webapp/css/waves.css"/>
+    <link rel='stylesheet' href="\static\webapp\css\buttonanimation.css"/>
+    <link rel='stylesheet' href="\static\webapp\css\flippingcards.css"/>
+    <link rel='stylesheet' href="\static\webapp\css\waves.css"/>
+    <link rel='stylesheet' href="\static\webapp\css\logincard.css"/>
 
 </head>
 
@@ -53,11 +54,12 @@
                         <a class="nav-link text-light" href="{% url 'restuarant' %}">
                             <font size="3">&nbsp;
                                 <strong style="color: black;">
-                                    Grocery Stores
+                                    All Grocery Stores
                                 </strong>
                             </font>
                         </a>
                     </li>
+                    
                 </ul>
             </div>
             
@@ -75,10 +77,19 @@
                 <ul class="navbar-nav mr-auto text-center">
                     {% if request.user.is_authenticated %}
                     <li class="nav-item">
+                        <a class="nav-link text-light" href="{% url 'orderhistory' %}">
+                            <font size="3">&nbsp;
+                                <strong style="color: black;">
+                                    My Orders
+                                </strong>
+                            </font>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link text-light" href="{% url 'logout' %}">
                             <font size="3"> &nbsp;<span aria-hidden="true"></span>
                                 <strong style="color: black;">
-                                    LogOut 
+                                    Log Out 
                                 </strong> 
                             </font>
                         </a>
@@ -151,6 +162,8 @@
     <script src="/static/webapp/js/simpleCart.min.js"> </script>
     <script type="text/javascript" src="/static/webapp/js/move-top.js"></script>
     <script type="text/javascript" src="/static/webapp/js/easing.js"></script>
+    <script type="text/javascript" src="/static/webapp/js/logincard.js"></script>
+
 </body>
 
 </html>

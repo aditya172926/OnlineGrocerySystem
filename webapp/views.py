@@ -204,9 +204,43 @@ class OrderHistoryView(TemplateView):
     template_name = 'webapp/orderhistory.html'
 
     def get(self, request):
-        all_histories = Order.objects.all()
+        all_histories = Order.objects.all().order_by('-timestamp')
         histories = all_histories.filter(orderedBy=request.user)
-        args = {'histories': histories}
+
+        orders = Order.objects.all().order_by('-timestamp').filter(orderedBy=request.user)
+        corders = []
+
+        for order in orders:
+
+            user = User.objects.filter(id=order.orderedBy.id)
+            user = user[0]
+            corder = []
+            if user.is_restaurant:
+                corder.append(user.restaurant.rname)
+                corder.append(user.restaurant.info)
+            else:
+                corder.append(user.customer.f_name)
+            items_list = orderItem.objects.filter(ord_id=order)
+
+            items = []
+            for item in items_list:
+                citem = []
+                citem.append(item.item_id)
+                citem.append(item.quantity)
+                menu = Menu.objects.filter(id=item.item_id.id)
+                citem.append(menu[0].price*item.quantity)
+                menu = 0
+                items.append(citem)
+
+            corder.append(items)
+
+            corders.append(corder)
+        
+
+        args = {
+            'histories': histories,
+            'orders': corders
+            }
         return render(request, self.template_name, args)
 
 

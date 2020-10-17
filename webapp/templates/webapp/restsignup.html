@@ -9,25 +9,30 @@
                 <div class="panel-body">
                     <br>
                     <br>
-                    <h3><font size="5">Register for Restuarant</font></h3>
+                    <h3>
+                        <font size="5">Register for Grocery Store</font>
+                    </h3>
                     {% if error_message %}
-                        <p><strong>{{ error_message }}</strong></p>
+                    <p><strong>{{ error_message }}</strong></p>
                     {% endif %}
                     <br>
 
                     <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
                         {% include 'webapp/form_template.html' %}
-                        
+
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-success btn-lg">Submit</button>
+                                <button class='glow-on-hover' type='submit'
+                                    style="color: rgb(0, 248, 33); border: 1px solid grey;">
+                                    Submit
+                                </button>
                             </div>
                         </div>
                     </form>
 
                 </div>
-                
+
                 <div class="panel-footer">
                     Already have an account? <a href="{% url 'rlogin' %}">Click here</a> to log in.
                 </div>
