@@ -198,8 +198,6 @@ def checkout(request):
         }
         return render(request, 'webapp/order.html', context)
 
-
-# def orderHistory(request, pk=None):
 class OrderHistoryView(TemplateView):
     template_name = 'webapp/orderhistory.html'
 
@@ -246,7 +244,7 @@ class OrderHistoryView(TemplateView):
 
 ####### ------------------- Restaurant Side ------------------- #####
 
-# creating restuarant account
+# creating grocery store account
 def restRegister(request):
     form = RestuarantSignUpForm(request.POST or None)
     if form.is_valid():
@@ -267,7 +265,7 @@ def restRegister(request):
     return render(request, 'webapp/restsignup.html', context)
 
 
-# restuarant login
+# grocery store login
 def restLogin(request):
     if request.method == "POST":
         username = request.POST['username']
@@ -284,7 +282,7 @@ def restLogin(request):
     return render(request, 'webapp/restlogin.html')
 
 
-# restaurant profile view
+# grocery store profile view
 def restaurantProfile(request, pk=None):
     if pk:
         user = User.objects.get(pk=pk)
@@ -293,9 +291,7 @@ def restaurantProfile(request, pk=None):
 
     return render(request, 'webapp/rest_profile.html', {'user': user})
 
-# create restaurant detail
-
-
+# create grocery store detail
 @login_required(login_url='/login/restaurant/')
 def createRestaurant(request):
     form = RestuarantForm(request.POST or None, request.FILES or None)
@@ -310,9 +306,7 @@ def createRestaurant(request):
     }
     return render(request, 'webapp/rest_profile_form.html', context)
 
-# Update restaurant detail
-
-
+# Update grocery store detail
 @login_required(login_url='/login/restaurant/')
 def updateRestaurant(request, id):
     form = RestuarantForm(
@@ -327,7 +321,7 @@ def updateRestaurant(request, id):
     return render(request, 'webapp/rest_profile_form.html', context)
 
 
-# add  menu item for restaurant
+# add  menu item for grocery store
 @login_required(login_url='/login/restaurant/')
 def menuManipulation(request):
     if not request.user.is_authenticated:
