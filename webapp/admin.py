@@ -3,6 +3,7 @@ from .models import Customer, Restaurant, Item, Menu, Order, orderItem, User
 
 admin.site.site_header = 'Fresh Food Adminstration'
 
+
 class CustomerAdmin(admin.ModelAdmin):
     list_display = (
         'user',
@@ -12,6 +13,7 @@ class CustomerAdmin(admin.ModelAdmin):
         'phone',
         'address'
     )
+
 
 class RestaurantAdmin(admin.ModelAdmin):
     list_display = (
@@ -25,6 +27,7 @@ class RestaurantAdmin(admin.ModelAdmin):
         'approved'
     )
 
+
 class ItemAdmin(admin.ModelAdmin):
     list_display = (
         'fname',
@@ -33,33 +36,34 @@ class ItemAdmin(admin.ModelAdmin):
         'description'
     )
 
+
 class MenuAdmin(admin.ModelAdmin):
     list_display = (
-        'id',
         'item_id',
         'r_id',
         'price',
         'quantity'
     )
 
+
 class OrderAdmin(admin.ModelAdmin):
     list_display = (
-        'id',
-        'total_amount',
         'timestamp',
-        'delivery_addr',
+        'total_amount',
         'orderedBy',
+        'delivery_addr',
         'r_id',
         'status'
     )
 
+
 class orderItemAdmin(admin.ModelAdmin):
     list_display = (
-        'id',
         'item_id',
         'ord_id',
         'quantity'
     )
+
 
 admin.site.register(User)
 admin.site.register(Customer, CustomerAdmin)

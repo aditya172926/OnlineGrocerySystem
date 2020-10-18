@@ -198,6 +198,7 @@ def checkout(request):
         }
         return render(request, 'webapp/order.html', context)
 
+
 class OrderHistoryView(TemplateView):
     template_name = 'webapp/orderhistory.html'
 
@@ -205,7 +206,8 @@ class OrderHistoryView(TemplateView):
         all_histories = Order.objects.all().order_by('-timestamp')
         histories = all_histories.filter(orderedBy=request.user)
 
-        orders = Order.objects.all().order_by('-timestamp').filter(orderedBy=request.user)
+        orders = Order.objects.all().order_by(
+            '-timestamp').filter(orderedBy=request.user)
         corders = []
 
         for order in orders:
@@ -233,12 +235,11 @@ class OrderHistoryView(TemplateView):
             corder.append(items)
 
             corders.append(corder)
-        
 
         args = {
             'histories': histories,
             'orders': corders
-            }
+        }
         return render(request, self.template_name, args)
 
 
@@ -292,6 +293,8 @@ def restaurantProfile(request, pk=None):
     return render(request, 'webapp/rest_profile.html', {'user': user})
 
 # create grocery store detail
+
+
 @login_required(login_url='/login/restaurant/')
 def createRestaurant(request):
     form = RestuarantForm(request.POST or None, request.FILES or None)
@@ -307,6 +310,8 @@ def createRestaurant(request):
     return render(request, 'webapp/rest_profile_form.html', context)
 
 # Update grocery store detail
+
+
 @login_required(login_url='/login/restaurant/')
 def updateRestaurant(request, id):
     form = RestuarantForm(

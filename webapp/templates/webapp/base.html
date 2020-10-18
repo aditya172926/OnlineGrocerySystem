@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>
         {% block title %}
-        Grocery Store
+        Fresh Food Store
         {% endblock title %}
     </title>
 
@@ -25,10 +25,10 @@
     <!--Animation-->
     <script src="/static/webapp/js/wow.min.js"></script>
     <link href="static/webapp/css/animate.css" rel='stylesheet' type='text-center/css' />
-    <link rel='stylesheet' href="\static\webapp\css\buttonanimation.css"/>
-    <link rel='stylesheet' href="\static\webapp\css\flippingcards.css"/>
-    <link rel='stylesheet' href="\static\webapp\css\waves.css"/>
-    <link rel='stylesheet' href="\static\webapp\css\logincard.css"/>
+    <link rel='stylesheet' href="\static\webapp\css\buttonanimation.css" />
+    <link rel='stylesheet' href="\static\webapp\css\flippingcards.css" />
+    <link rel='stylesheet' href="\static\webapp\css\waves.css" />
+    <link rel='stylesheet' href="\static\webapp\css\logincard.css" />
 
 </head>
 
@@ -43,10 +43,10 @@
                 <ul class="navbar-nav ml-auto text-center">
                     <li class="nav-item active">
                         <a class="nav-link text-light" href="{% url 'index' %}">
-                            <font size="3">&nbsp; 
+                            <font size="3">&nbsp;
                                 <strong style="color: black;">
                                     Home
-                                </strong> 
+                                </strong>
                             </font>
                         </a>
                     </li>
@@ -59,10 +59,10 @@
                             </font>
                         </a>
                     </li>
-                    
+
                 </ul>
             </div>
-            
+
             <div class="mx-auto my-2 order-0 order-md-1 position-relative">
                 <a class="mx-auto" href="#">
                     <img src="/static/webapp/images/freshlogo.png" style="height: 90px;" alt="Home"
@@ -89,8 +89,8 @@
                         <a class="nav-link text-light" href="{% url 'logout' %}">
                             <font size="3"> &nbsp;<span aria-hidden="true"></span>
                                 <strong style="color: black;">
-                                    Log Out 
-                                </strong> 
+                                    Log Out
+                                </strong>
                             </font>
                         </a>
                     </li>
@@ -106,7 +106,7 @@
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link text-light" href="{% url 'login' %}">
-                            <font size="3">&nbsp;<span aria-hidden="true"></span> 
+                            <font size="3">&nbsp;<span aria-hidden="true"></span>
                                 <strong style="color: black;">
                                     LogIn
                                 </strong>
@@ -115,7 +115,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="{% url 'register' %}">
-                            <font size="3">&nbsp;<span aria-hidden="true"></span> 
+                            <font size="3">&nbsp;<span aria-hidden="true"></span>
                                 <strong style="color: black;">
                                     SignUp
                                 </strong>
@@ -136,22 +136,23 @@
     <br>
     <br>
     <div>
-        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <defs>
                 <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
             </defs>
             <g class="parallax">
-              <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(99,255,51,0.7)" />
-              <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(99,255,51,0.5)" />
-              <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(99,255,51,0.3)" />
-              <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(99,255,51,0.7)" />
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(99,255,51,0.7)" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(99,255,51,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(99,255,51,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(99,255,51,0.7)" />
             </g>
         </svg>
     </div>
     <div class="wavecontent flex">
         <p>2020 | For educational Purposes</p>
-      </div>
-    
+    </div>
+
 
     <script type="text/javascript" src="{%static 'webapp/js/jquery.min.js'%}">
     </script>
