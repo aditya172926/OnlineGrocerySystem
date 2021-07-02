@@ -15,6 +15,8 @@ While deploying:
 2. hide your secret key, better to generate it with environment variables or read it from another file
 3. don't forget to mention in Allow_hosts list
 
+# The flow of the Project
+
 This project implements an Online Grocery selling and buying process. Using this a user can either buy groceries or sell them by listing as vendors.
 It contains separate login processes for customers and vendors. Vendors have to submit their profile in the website and wait for a confirmation from the 
 admins to approve it.
