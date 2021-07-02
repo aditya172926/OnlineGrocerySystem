@@ -10,6 +10,11 @@ The implementation of this is done using:
 4. frontend in HTML, CSS, JavaScript and bridge it with Jinja templating
 5. Database in Sqlite
 
+While deploying:
+1. Make sure debug in setting is set to False
+2. hide your secret key, better to generate it with environment variables or read it from another file
+3. don't forget to mention in Allow_hosts list
+
 This project implements an Online Grocery selling and buying process. Using this a user can either buy groceries or sell them by listing as vendors.
 It contains separate login processes for customers and vendors. Vendors have to submit their profile in the website and wait for a confirmation from the 
 admins to approve it.
