@@ -3,14 +3,12 @@ WDL mini project
 
 This project is implemented as a project under the scopr of web development and online food chains currently popular in markets.
 The implementation of this is done using:
+
 1. Django web framework
-2. Django Rest framework to make REST API
-3. Tokenauthentication for securing API, currently disabled
-4. Python programming language
-5. frontend in HTML, CSS, JavaScript and bridge it with Jinja templating
-6. Database in Sqlite
-
-
+2. Tokenauthentication for securing API, currently disabled
+3. Backend Python programming language
+4. frontend in HTML, CSS, JavaScript and bridge it with Jinja templating
+5. Database in Sqlite
 
 This project implements an Online Grocery selling and buying process. Using this a user can either buy groceries or sell them by listing as vendors.
 It contains separate login processes for customers and vendors. Vendors have to submit their profile in the website and wait for a confirmation from the 
